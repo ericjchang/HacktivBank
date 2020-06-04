@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HacktivBank</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-md" style="background-color: #00607c;">
+            <div class="container-fluid"><a class="navbar-brand" href="/">HacktivBank&nbsp;🏦&nbsp;</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/directors">Directors</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/hospitals">Hospitals</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/doctors">Doctors</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/patients">Patients</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/records">Medical Records</a></li>
+                    </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="row justify-content-center mb-5">
+            <div class="col title-bar">
+                <h1 class="text-center text-white p-5"><strong>Bank Branch List</strong></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form class="form-inline float-right">
+                    <div class="form-group mx-md-3 mb-2"><input class="form-control" type="text" placeholder="Search by name" name="search"></div>
+                    <div class="form-group mb-2"><button class="btn btn-outline-success" type="button">🔍 Search</button></div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="fit">No.</th>
+                                <th>Bank Branch</th>
+                                <th class="fit">Quota / hour</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="text-center">1</th>
+                                <td>HacktivBank Pondok Indah<br>Jl. Sultan Iskandar Muda no.12</td>
+                                <td>50</td>
+                                <td class="fit"><button class="btn btn-outline-success mr-1" type="button">✔&nbsp;Book</button><button class="btn btn-outline-primary" type="button">📞 Call</button></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">2</th>
+                                <td>HacktivBank MCC<br>Jl. Ahmad Yani no.122</td>
+                                <td>35</td>
+                                <td><button class="btn btn-outline-success mr-1" type="button">✔&nbsp;Book</button><button class="btn btn-outline-primary" type="button">📞 Call</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
