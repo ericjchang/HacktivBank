@@ -1,0 +1,23 @@
+[
+  {
+    "branch_name": "Pondok Indah",
+    "address": "Jl. Diponegoro no. 32",
+    "phone_number": "6282147541854",
+    "quota_per_hour": 30,
+    "StaffId": 2
+  },
+  {
+    "branch_name": "Kelapa Gading",
+    "address": "Jl. A. Yani, Ruko RCA Kav.A3 No. 12-13",
+    "phone_number": "6284152368452",
+    "quota_per_hour": 20,
+    "StaffId": 1
+  },
+  {
+    "branch_name": "MCC",
+    "address": "Jl. Kapt. Patimura no. 15",
+    "phone_number": "62451154862",
+    "quota_per_hour": 15,
+    "StaffId": 3
+  }
+]

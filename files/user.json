@@ -1,0 +1,23 @@
+[
+  {
+    "first_name": "Christine",
+    "last_name": "Cynthia",
+    "username": "ccynthia",
+    "password": "$2b$10$quxssutM.a3Wd4DMu6QRBereDzhgP.hhsv4GyqVEaL8DGZcU7WUWi",
+    "email": "ccynthia@mail.com "
+  },
+  {
+    "first_name": "Tom",
+    "last_name": "Jerry",
+    "username": "tomnjerry",
+    "password": "$2b$10$quxssutM.a3Wd4DMu6QRBereDzhgP.hhsv4GyqVEaL8DGZcU7WUWi",
+    "email": "catandmouse@mail.com"
+  },
+  {
+    "first_name": "Thomas",
+    "last_name": "Doni",
+    "username": "tdoni",
+    "password": "$2b$10$quxssutM.a3Wd4DMu6QRBereDzhgP.hhsv4GyqVEaL8DGZcU7WUWi",
+    "email": "tdoni@mail.com"
+  }
+]

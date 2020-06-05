@@ -1,0 +1,20 @@
+[
+  {
+    "first_name": "Djoko",
+    "last_name": "Susilo",
+    "username": "dsusilo",
+    "password": "$2b$10$quxssutM.a3Wd4DMu6QRBereDzhgP.hhsv4GyqVEaL8DGZcU7WUWi"
+  },
+  {
+    "first_name": "Sinta",
+    "last_name": "Tina",
+    "username": "sstina",
+    "password": "$2b$10$quxssutM.a3Wd4DMu6QRBereDzhgP.hhsv4GyqVEaL8DGZcU7WUWi"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Doe",
+    "username": "jdoe",
+    "password": "$2b$10$quxssutM.a3Wd4DMu6QRBereDzhgP.hhsv4GyqVEaL8DGZcU7WUWi"
+  }
+]
