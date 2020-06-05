@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>HacktivBank</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand-md" style="background-color: #00607c;">
-            <div class="container-fluid"><a class="navbar-brand" href="/">HacktivBank&nbsp;🏦&nbsp;</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div
-                    class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/directors">Directors</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/hospitals">Hospitals</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/doctors">Doctors</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/patients">Patients</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="/records">Medical Records</a></li>
-                    </ul>
-            </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-dark navbar-expand-md" style="background-color: #00607c;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">HacktivBank&nbsp;🏦&nbsp;</a
+          ><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav">
+              <li class="nav-item" role="presentation"><a class="nav-link" href="/bank">Bank List</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="/book/list">My Book</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <div class="container-fluid">
-        <div class="row justify-content-center mb-5">
-            <div class="col title-bar">
-                <h1 class="text-center text-white p-5"><strong>Make Appointment</strong></h1>
-            </div>
+      <div class="row justify-content-center mb-5">
+        <div class="col title-bar">
+          <h1 class="text-center text-white p-5"><strong>Make Appointment</strong></h1>
         </div>
-        <div class="row">
-            <div class="col-4 offset-4">
-                <form>
-                    <div class="form-group"><label>Branch Name :</label><input class="form-control" type="text" readonly="" value="HacktivBank MCC"></div>
-                    <div class="form-group"><label>Time :<br>&nbsp; Fri Jun 5 2020<br></label><select class="form-control"><option value="" selected="">-- SELECT TIME --</option><option value="09.00">09.00</option><option value="10.00" disabled="">10.00</option><option value="11.00">11.00</option></select></div>
-                </form>
-                <div class="form-group"><button class="btn btn-outline-success mr-1" type="button">✔&nbsp;Book</button><button class="btn btn-outline-danger" type="button">🚪Back</button></div>
+      </div>
+      <div class="row">
+        <div class="col-4 offset-4">
+          <form method="POST" action="/book/<%= id%>">
+            <div class="form-group">
+              <label>Branch Name :</label>
+              <input class="form-control" type="text" readonly="" value="<%= bank[0].branch_name%> " />
             </div>
+            <div class="form-group">
+              <label>Time :<br />&nbsp; <%= dateYesterday()%><br /></label>
+              <select class="form-control" name="date"
+                ><option value="" selected="">-- SELECT TIME --</option>
+                <option value="<%= dateTime(10) %>" <% countBook(appointment)%> >10.00</option>
+                <option value="<%= dateTime(11) %>">11.00</option>
+                <option value="<%= dateTime(12) %>">12.00</option>
+                <option value="<%= dateTime(13) %>">13.00</option>
+                <option value="<%= dateTime(14) %>">14.00</option>
+                <option value="<%= dateTime(15) %>">15.00</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-outline-success mr-1" type="submit">✔&nbsp;Book</button>
+              <a class="btn btn-outline-danger" href="/bank">🚪Back</a>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
+  </body>
 </html>

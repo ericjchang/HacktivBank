@@ -21,6 +21,7 @@ app.use(routes);
 
 app.use('/', express.static('views'));
 app.use('/user', express.static('views'));
+app.use('/book', express.static('views'));
 
 app.listen(port, () => {
   console.log(`Your apps running on http://localhost:${port}`);

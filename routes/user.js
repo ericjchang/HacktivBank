@@ -8,4 +8,6 @@ routes.post('/login', Controller.loginPost);
 routes.get('/register', Controller.registerGet);
 routes.post('/register', Controller.registerPost);
 
+routes.get('/logout', Controller.logout);
+
 module.exports = routes;

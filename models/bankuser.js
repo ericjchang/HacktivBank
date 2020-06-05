@@ -12,7 +12,15 @@ module.exports = (sequelize, DataTypes) => {
       checkedBy: DataTypes.INTEGER,
       is_checked_in: DataTypes.BOOLEAN,
     },
-    { sequelize }
+    {
+      sequelize,
+      hooks: {
+        beforeCreate: (instance, option) => {
+          instance.checkedBy = 0;
+          instance.is_checked_in = false;
+        },
+      },
+    }
   );
   BankUser.associate = function (models) {
     BankUser.belongsTo(models.Bank);

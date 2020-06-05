@@ -46,20 +46,17 @@
               <thead>
                 <tr>
                   <th class="fit">No.</th>
-                  <th>Bank Branch</th>
-                  <th class="fit">Quota / hour</th>
-                  <th>Action</th>
+                  <th class="fit">ID</th>
+                  <th class="fit">Bank Branch</th>
+                  <th>Time</th>
                 </tr>
               </thead>
               <tbody>
                 <% data.forEach((el,i) => { %>
                   <th class="text-center"> <%= i+1%> </th>
-                  <td>HacktivBank <%= el.branch_name %><br /><%= el.address%></td>
-                  <td><%= el.quota_per_hour%></td>
-                  <td class="fit">
-                    <a class="btn btn-outline-success mr-1" href="/book/<%= el.id%>">✔&nbsp;Book</a>
-                    <a class="btn btn-outline-primary" href="tel:<%= el.phone_number%>" >📞 Call</a>
-                  </td>
+                  <td><%= el.id%></td>
+                  <td><%= el.Bank.branch_name%></td>
+                  <td><%= el.appointment_time%></td>
                 </tr>
                 <% }); %>
               </tbody>

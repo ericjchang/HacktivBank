@@ -12,13 +12,14 @@ class UserController {
     })
       .then((data) => {
         if (!data) {
-          throw new Error('Username is not found!');
+          res.send('Username is not found!');
         } else {
           if (bcrypt.compareSync(req.body.password, data.password)) {
-            req.session.userId = req.body.username;
+            req.session.userId = data.id;
+            req.session.username = req.body.username;
             res.redirect('/bank');
           } else {
-            throw new Error("Username and Password doesn't match!");
+            res.send("Username and Password doesn't match!");
           }
         }
       })
@@ -47,6 +48,13 @@ class UserController {
       .catch((err) => {
         res.send(err);
       });
+  }
+
+  static logout(req, res) {
+    req.session.destroy((err) => {
+      if (err) res.send(err);
+      else res.redirect('/');
+    });
   }
 }
 
