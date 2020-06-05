@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.col.title-bar {
+  background-color: #00a3dd;
+}
+
+.table th.fit, .table td.fit {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.table thead {
+  text-align: center;
+}
+
